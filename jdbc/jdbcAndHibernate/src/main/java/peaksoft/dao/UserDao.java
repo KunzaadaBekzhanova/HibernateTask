@@ -12,9 +12,11 @@ public interface UserDao {
 
     void saveUser(String name, String lastName, byte age);
 
-    void removeUserById(long id);
+    User removeUserById(long id);
 
     List<User> getAllUsers();
 
     void cleanUsersTable();
+
+    boolean existsByFirstName(String firstName);
 }
